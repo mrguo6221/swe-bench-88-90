@@ -98,7 +98,7 @@ Both CLIs significantly outperform the same-model baseline (67.8 %) and the publ
 
 Failure modes also differ in a way that is itself diagnostic: claude-cli's failures are predominantly infrastructure (cli process crashes, 12 of 13); qwen-cli's are predominantly model behavior (model declares done without producing a patch, 15 of 16). Both CLIs fail on the same hard 4 instances (`django-10554`, `-16263`, `xarray-7229`, `sympy-22456`), suggesting these are Qwen3.5-27B-Thinking limits, not stack artifacts.
 
-Full ablation data, preds files, and per-instance reports are in `evidence/ablations/qwen-cli/`.
+Full ablation data, preds files, and per-instance reports are in `evidence/ablations/qwen-cli/`. The directory structure mirrors the main submission (`preds.lenient.json`, `preds.strict.json`, `report.*.json`, `manual_eval_psf_real/`, `SHA256SUMS`) — same file schema, same eval framework, so reviewers can apply identical scrutiny to both. The main submission's files sit at `evidence/` and the ablation lives one level down only because there is a single headline submission (claude-cli, 90.0 %); the ablation is supporting evidence, not a competing submission.
 
 This ablation does **not** address proxy transparency (both CLIs use the same proxy) or training-data contamination (same model). It does address the question of whether the 90 % is a claude-cli-specific exploit. It is not.
 

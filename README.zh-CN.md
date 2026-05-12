@@ -79,7 +79,7 @@ SWE-bench 期间 cli=claude 请求 **4110 次**, BON 标记 **0 次**.
 
 两个 CLI 的失败模式也不同, 这本身就是诊断: claude-cli 的失败多是 infra (cli 进程崩, 12/13); qwen-cli 的失败多是模型行为 (模型说完成但没改文件, 15/16). 两个 CLI 同时跑不出来的 4 题 (`django-10554`, `-16263`, `xarray-7229`, `sympy-22456`) 是 Qwen3.5-27B-Thinking 自身的能力边界, 跟 stack 无关.
 
-完整 ablation 数据、preds 文件、per-instance 报告在 `evidence/ablations/qwen-cli/`.
+完整 ablation 数据、preds 文件、per-instance 报告在 `evidence/ablations/qwen-cli/`. 子目录结构与主提交完全平行 (`preds.lenient.json`、`preds.strict.json`、`report.*.json`、`manual_eval_psf_real/`、`SHA256SUMS`), 同一套文件 schema, 同一套 eval 框架, 审稿人可以用同等标准检查. 主提交文件放在 `evidence/` 顶层、对照实验下沉一级目录, 只是因为 headline 只有一个 (claude-cli 的 90.0 %), 对照实验是支撑证据, 不是另一份并列提交.
 
 这一 ablation **不**解决 proxy 透明度问题 (两个 CLI 用的同一个 proxy) 和数据污染问题 (同模型). 它解决的是: 90% 是不是 claude-cli 黑箱. 答案: 不是.
 
