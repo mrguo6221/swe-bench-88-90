@@ -1,0 +1,92 @@
+date,time,model,run_id,resolved,total,pct,mtime
+2026-02-04,11:26,claude-mini-v6 (closed),pass_at_k_round_1,151,500,30.2,1770175593
+2026-02-04,19:20,claude-mini-v6 (closed),pass_at_k_round_2,56,500,11.2,1770204020
+2026-02-05,23:17,claude-opus-4-5 (closed),api_test_round_1,0,500,0.0,1770304638
+2026-02-08,00:07,Qwen3-Next-NoThinking (80B),nocot_20260206,342,500,68.4,1770480458
+2026-02-09,08:15,Qwen3-Coder-Smart,smart_all124_20260209_080525,21,500,4.2,1770596146
+2026-02-09,13:35,Qwen3-Coder-Smart,smart_rescue34_20260209_130429,10,500,2.0,1770615339
+2026-02-10,09:09,Qwen3-Coder-Smart,regression342_20260210_085134,307,500,61.4,1770685753
+2026-02-13,11:31,Qwen3-Coder-Smart,v28_new53,31,500,6.2,1770953498
+2026-02-13,19:24,Qwen3-Coder-Smart,v28_remaining,120,500,24.0,1770981855
+2026-02-14,15:41,Qwen3-Coder-Smart,smart_v30_validate50_20260214_131318,35,500,7.0,1771054890
+2026-02-15,00:00,Qwen3-Coder-Smart,smart_v32_merged,28,500,5.6,1771084829
+2026-02-15,08:22,Qwen3-Coder-Smart,smart_v32b,27,500,5.4,1771114955
+2026-02-15,13:55,Qwen3-Coder-Smart,smart_v34_validate50,29,500,5.8,1771134918
+2026-02-15,18:37,Qwen3-Coder-Smart,smart_v35_validate50,27,500,5.4,1771151878
+2026-02-15,21:32,Qwen3-Coder-Smart,smart_v35b_validate50,26,500,5.2,1771162378
+2026-02-16,00:20,Qwen3-Next NoCOT reproduce,nocot_reproduce50,34,500,6.8,1771172432
+2026-02-16,23:01,Qwen3-Next-NoThinking (80B),v36_A_nocot_long_20260216_211324,15,500,3.0,1771254107
+2026-02-16,23:55,Qwen3-Next-NoThinking (80B),v36_B_nocot_short_20260216_230147,18,500,3.6,1771257303
+2026-02-17,00:38,Qwen3-Coder-Smart,v36_C_proxy_zero_20260216_235503,17,500,3.4,1771259936
+2026-02-17,01:20,Qwen3-Coder-Smart,v36_D_proxy_fq_20260217_003856,18,500,3.6,1771262425
+2026-02-17,02:10,Qwen3-Coder-Smart,v36_E_proxy_l123_20260217_012025,12,500,2.4,1771265425
+2026-02-17,03:05,Qwen3-Coder-Smart,v36_F_proxy_full_20260217_021026,12,500,2.4,1771268715
+2026-02-17,13:36,Qwen3-Coder-V37,v37_std50_20260217_090405,29,500,5.8,1771306565
+2026-02-17,17:11,Qwen3-Coder-V37,v37b_21tasks_20260217_153319,3,500,0.6,1771319482
+2026-02-18,00:17,Qwen3-Coder-V37,v37b_21tasks_20260217_225420,7,500,1.4,1771345047
+2026-02-18,03:35,Qwen3-Coder-V37,v37e_std50_20260218_011037,30,500,6.0,1771356954
+2026-02-18,10:29,Qwen3-Next-NoThinking (80B),sage_pass2_20260218_093504,6,500,1.2,1771381769
+2026-02-18,13:18,Qwen3-Next-NoThinking (80B),sage_pilot50_20260218_114408,29,500,5.8,1771391902
+2026-02-21,18:30,Qwen3-Coder-SWE,v39c,4,500,0.8,1771669800
+2026-02-21,18:37,Qwen3-Coder-SWE,v38,6,500,1.2,1771670266
+2026-02-21,18:39,Qwen3-Coder-SWE,v38b,6,500,1.2,1771670395
+2026-02-21,19:09,Qwen3-Coder-SWE,v39d,5,500,1.0,1771672189
+2026-02-21,21:49,Qwen3-Coder-SWE,v39e,3,500,0.6,1771681779
+2026-02-21,22:04,Qwen3-Coder-SWE,v39f,2,500,0.4,1771682680
+2026-02-21,23:17,Qwen3-Coder-SWE,v39g,4,500,0.8,1771687032
+2026-02-21,23:38,Qwen3-Coder-SWE,v39g_4k,0,500,0.0,1771688289
+2026-02-22,01:56,Qwen3-Coder-Next-FP8,ab_A_nocot,27,500,5.4,1771696601
+2026-02-22,03:53,Qwen3-Coder-SWE,ab_B_cot,30,500,6.0,1771703603
+2026-02-22,09:25,Qwen3-Coder-SWE,v40_10hard,1,500,0.2,1771723537
+2026-02-22,11:42,Qwen3-Coder-SWE,v40b_50tasks,29,500,5.8,1771731759
+2026-02-22,12:17,Qwen3-Coder-SWE,v40c_7key,2,500,0.4,1771733827
+2026-02-22,13:52,Qwen3-Coder-SWE,v40d_50tasks,26,500,5.2,1771739530
+2026-05-03,09:47,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_run2,302,500,60.4,1777772843
+2026-05-03,09:49,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_run1,277,500,55.4,1777772950
+2026-05-03,11:09,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_smoke30,18,500,3.6,1777777748
+2026-05-03,18:51,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_run4_smoke100,58,500,11.6,1777805477
+2026-05-03,21:18,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_run4_smoke100_v3,55,500,11.0,1777814307
+2026-05-03,23:57,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_run4_smoke100_v3_1,56,500,11.2,1777823875
+2026-05-04,12:26,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_run4_smoke100_v4,55,500,11.0,1777868808
+2026-05-04,15:00,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_run4_smoke100_v5,63,500,12.6,1777878036
+2026-05-04,19:21,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_b,13,500,2.6,1777893705
+2026-05-04,19:45,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_c,12,500,2.4,1777895142
+2026-05-04,20:12,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_a,15,500,3.0,1777896744
+2026-05-04,20:34,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_bb,11,500,2.2,1777898070
+2026-05-04,20:36,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_abc,1,500,0.2,1777898196
+2026-05-04,21:28,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_d,14,500,2.8,1777901297
+2026-05-04,21:50,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_g,13,500,2.6,1777902610
+2026-05-04,22:12,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_dg,13,500,2.6,1777903937
+2026-05-05,00:47,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_a_v2,13,500,2.6,1777913274
+2026-05-05,01:21,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_a_v3,13,500,2.6,1777915291
+2026-05-05,01:54,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_a_v4,14,500,2.8,1777917282
+2026-05-05,03:24,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_a_d,14,500,2.8,1777922654
+2026-05-05,03:55,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_a_g,10,500,2.0,1777924542
+2026-05-05,04:01,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v4_a_dg,9,500,1.8,1777924910
+2026-05-05,05:56,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v5_a_repro,13,500,2.6,1777931763
+2026-05-05,06:29,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v5_a_short,14,500,2.8,1777933779
+2026-05-05,06:44,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_matrix25_v5_a_only,15,500,3.0,1777934645
+2026-05-05,10:39,Qwen3.6-27B FP8 (mini-swe-agent),mini_swev_round6_r6_a_only,36,500,7.2,1777948769
+2026-05-05,14:15,Qwen3.5-27B-NoThinking,5-27B-NoThinking.r9_armA,65,500,13.0,1777961743
+2026-05-05,14:57,Qwen3.5-27B-Thinking,5-27B-Thinking.r9_armC,63,500,12.6,1777964277
+2026-05-05,15:44,Qwen3.5-27B-Thinking,5-27B-Thinking.r9_armB,64,500,12.8,1777967086
+2026-05-05,17:27,Qwen3.5-27B-NoThinking,5-27B-NoThinking.r10_pte,62,500,12.4,1777973263
+2026-05-06,11:05,Qwen3.5-27B-NoThinking,5-27B-NoThinking.r12_A1,59,500,11.8,1778036729
+2026-05-06,11:22,Qwen3.5-27B-NoThinking,5-27B-NoThinking.r12_A2,62,500,12.4,1778037767
+2026-05-06,12:39,Qwen3-Next-NoThinking (80B),r12_R4,60,500,12.0,1778042353
+2026-05-07,16:26,Qwen3.5-27B-NoThinking,5-27B-NoThinking.r14_union,80,500,16.0,1778142378
+2026-05-07,18:39,Qwen3.5-27B-NoThinking,5-27B-NoThinking.r14b_full,68,500,13.6,1778150347
+2026-05-07,22:49,Qwen3-Next-NoThinking (80B),r14c_v1,66,500,13.2,1778165349
+2026-05-08,11:24,Qwen3-Next-NoThinking (80B),r14d_v0,67,500,13.4,1778210645
+2026-05-08,12:37,Qwen3-Next-NoThinking (80B),r14d_v1,66,500,13.2,1778215028
+2026-05-08,14:31,Qwen3-Next-NoThinking (80B),r14d_v2_step200,68,500,13.6,1778221890
+2026-05-08,16:00,Qwen3-Next-NoThinking (80B),r14e_v0,69,500,13.8,1778227242
+2026-05-08,17:26,Qwen3.5-27B-Thinking,5-27B-Thinking.r14h,66,500,13.2,1778232398
+2026-05-08,19:47,Qwen3.5-27B-Thinking,5-27B-Thinking.r14i,69,500,13.8,1778240867
+2026-05-09,06:41,Qwen3-Next-NoThinking (80B),r14j_500,340,500,68.0,1778280111
+2026-05-10,02:17,Qwen3.5-27B-Thinking,5-27B-Thinking.r14k_500,339,500,67.8,1778350652
+2026-05-10,16:05,Qwen3.5-27B-Thinking,5-27B-Thinking.cli_swe_poc,1,500,0.2,1778400301
+2026-05-10,16:53,Qwen3.5-27B-Thinking,5-27B-Thinking.cli_swe_v2_20,16,500,3.2,1778403201
+2026-05-10,16:53,Qwen3.5-27B-Thinking,5-27B-Thinking.cli_swe_retry_seaborn,1,500,0.2,1778403210
+2026-05-10,17:24,Qwen3.5-27B-Thinking,5-27B-Thinking.cli_swe_retry_req,0,500,0.0,1778405072
+2026-05-11,14:53,Qwen3.5-27B-Thinking,5-27B-Thinking.cli_swe_500_lenient,446,500,89.2,1778482404

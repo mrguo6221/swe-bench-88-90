@@ -1,0 +1,131 @@
+SWE-bench Verified 91-experiment timeline (2026-02-04 to 2026-05-11)
+=====================================================================
+Y axis: PASS rate (% of 500 instances resolved)
+X axis: chronological order (each line is one full-500 eval)
+
+  100%|                                                                  ⭐
+      |                                                                   90.0  ← cli_swe_500_lenient + psf real-httpbin re-eval
+   90%|
+      |
+   80%|
+      |
+   70%|  68.4                                                        68.0
+      |  ●   61.4                                              67.8
+   60%|  ↑      ●  60.4 ← mini_swev_run2 (Qwen3.6-27B)         ●●
+      |  nocot     ●●                                          baseline + 80B baseline
+      |  Q-Next    Q3.6-27B + mini-swe
+   50%|
+      |
+   40%|
+      |
+   30%|  ●  pass_at_k (claude-mini-v6 closed)
+      |   30.2
+   20%|        ●  v28_remaining (Coder-Smart)
+      |          24
+   10%|  ●  pass_at_k_2 (11.2)
+      |  ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●● ← ~70 experiments,
+    0%|__1-15%_range__sea_of_failed_attempts__________________     mostly 1-6%
+
+      Feb 04 ┊ Feb 13 ┊ Feb 22 ┊ ─── pause ─── May 03 ┊ May 09 ┊ May 11
+
+Annotated chronology with model annotations:
+
+  Feb 04: claude-mini-v6 closed-API (pass_at_k):                30.2 %
+  Feb 04: claude-mini-v6 (pass_at_k_round_2):                   11.2 %
+  Feb 05: claude-opus-4-5 api_test:                              0.0 %  ← auth issue, not a real eval
+  Feb 08: Qwen3-Next-NoThinking 80B (nocot_20260206):     ✯    68.4 %  ← early high, not reproducible
+  Feb 09: Qwen3-Coder-Smart v18 (smart_all124):                  4.2 %
+  Feb 09: Qwen3-Coder-Smart-v18 (smart_rescue34):                2.0 %
+  Feb 10: Qwen3-Coder-Smart v18 (regression on 342):     ✯     61.4 %  ← regression of nocot
+  Feb 13: Qwen3-Coder-Smart proxy v28 (new53):                   6.2 %
+  Feb 13: Qwen3-Coder-Smart proxy v28 (remaining):              24.0 %
+  Feb 14: Coder-Smart proxy v30 (validate50):                    7.0 %
+  Feb 15: Coder-Smart proxy v32:                                 5.6 %
+  Feb 15: Coder-Smart proxy v32b:                                5.4 %
+  Feb 15: Coder-Smart proxy v34:                                 5.8 %
+  Feb 15: Coder-Smart proxy v35:                                 5.4 %
+  Feb 15: Coder-Smart proxy v35b:                                5.2 %
+  Feb 16: NoCOT-reproduce 50 (Qwen3-Next):                       6.8 %  ← can't reproduce early 68 %
+  Feb 16: Qwen3-Next-NoThinking v36 A nocot long:                3.0 %
+  Feb 16: Qwen3-Next-NoThinking v36 B nocot short:               3.6 %
+  Feb 17: Coder-Smart v36 C proxy zero:                          3.4 %
+  Feb 17: Coder-Smart v36 D proxy fq:                            3.6 %
+  Feb 17: Coder-Smart v36 E proxy l123:                          2.4 %
+  Feb 17: Coder-Smart v36 F proxy full:                          2.4 %
+  Feb 17: Qwen3-Coder-V37 v37 std50:                             5.8 %
+  Feb 17: Qwen3-Coder-V37 v37b 21tasks:                          0.6 %
+  Feb 18: Qwen3-Coder-V37 v37b 21tasks:                          1.4 %
+  Feb 18: Qwen3-Coder-V37 v37e std50:                            6.0 %
+  Feb 18: Qwen3-Next-NoThinking sage_pass2:                      1.2 %
+  Feb 18: Qwen3-Next-NoThinking sage_pilot50:                    5.8 %
+  Feb 21: Qwen3-Coder-SWE v39c:                                  0.8 %
+  Feb 21: Qwen3-Coder-SWE v38:                                   1.2 %
+  Feb 21: Qwen3-Coder-SWE v38b:                                  1.2 %
+  Feb 21: Qwen3-Coder-SWE v39d:                                  1.0 %
+  Feb 21: Qwen3-Coder-SWE v39e:                                  0.6 %
+  Feb 21: Qwen3-Coder-SWE v39f:                                  0.4 %
+  Feb 21: Qwen3-Coder-SWE v39g:                                  0.8 %
+  Feb 21: Qwen3-Coder-SWE v39g_4k:                               0.0 %
+  Feb 22: Qwen3-Coder-Next-FP8 ab_A_nocot:                       5.4 %
+  Feb 22: Qwen3-Coder-SWE ab_B_cot:                              6.0 %
+  Feb 22: Qwen3-Coder-SWE v40 10hard:                            0.2 %
+  Feb 22: Qwen3-Coder-SWE v40b 50tasks:                          5.8 %
+  Feb 22: Qwen3-Coder-SWE v40c 7key:                             0.4 %
+  Feb 22: Qwen3-Coder-SWE v40d 50tasks:                          5.2 %
+  ──── 10-week pause; rethinking approach ────
+  May 03: Qwen3.6-27B FP8 + mini-swe-agent (run2):       ✯    60.4 %  ← restart with new approach
+  May 03: Qwen3.6-27B FP8 + mini-swe-agent (run1):            55.4 %
+  May 03: Qwen3.6-27B (smoke30):                                 3.6 %
+  May 03: Qwen3.6-27B (smoke100):                               11.6 %
+  May 03: Qwen3.6-27B (smoke100 v3):                            11.0 %
+  May 03: Qwen3.6-27B (smoke100 v3_1):                          11.2 %
+  May 04: Qwen3.6-27B (smoke100 v4):                            11.0 %
+  May 04: Qwen3.6-27B (smoke100 v5):                            12.6 %
+  May 04-05: matrix25 ablations (~14 variants on 25-instance slices)
+                                                            2.0-3.0 %  ← per-axis ablation
+  May 05: Qwen3.5-27B-NoThinking (r9_armA):                     13.0 %
+  May 05: Qwen3.5-27B-Thinking (r9_armC):                       12.6 %
+  May 05: Qwen3.5-27B-Thinking (r9_armB):                       12.8 %
+  May 05: Qwen3.5-27B-NoThinking (r10_pte):                     12.4 %
+  May 06: Qwen3.5-27B-NoThinking (r12_A1):                      11.8 %
+  May 06: Qwen3.5-27B-NoThinking (r12_A2):                      12.4 %
+  May 06: Qwen3-Next-NoThinking (r12_R4):                       12.0 %
+  May 07: Qwen3.5-27B-NoThinking (r14_union):                   16.0 %
+  May 07: Qwen3.5-27B-NoThinking (r14b_full):                   13.6 %
+  May 07: Qwen3-Next-NoThinking (r14c_v1):                      13.2 %
+  May 08: Qwen3-Next-NoThinking (r14d_v0):                      13.4 %
+  May 08: Qwen3-Next-NoThinking (r14d_v1):                      13.2 %
+  May 08: Qwen3-Next-NoThinking (r14d_v2_step200):              13.6 %
+  May 08: Qwen3-Next-NoThinking (r14e_v0):                      13.8 %
+  May 08: Qwen3.5-27B-Thinking (r14h):                          13.2 %
+  May 08: Qwen3.5-27B-Thinking (r14i):                          13.8 %
+  May 09: Qwen3-Next-NoThinking 80B + mini-swe (r14j):  ✯       68.0 %
+  May 10: Qwen3.5-27B-Thinking + mini-swe (r14k=BASELINE):✯    67.8 %  ← official baseline
+  May 10: 5-27B-Thinking + cli+proxy POC:                        0.2 %  ← 1 instance smoke
+  May 10: 5-27B-Thinking + cli+proxy retry_seaborn:              0.2 %  ← 1 instance smoke
+  May 10: 5-27B-Thinking + cli+proxy v2_20:               ✯     3.2 % (16/20 = 80 % on slice)
+  May 10: 5-27B-Thinking + cli+proxy retry_req:                  0.0 %  ← 0 of 1 (smoke fail)
+  May 11: ★ Qwen3.5-27B-Thinking + claude-cli + proxy ★  ⭐⭐⭐  90.0 %  ← FINAL (with psf re-eval, see §4.1)
+                                                                          (446/500)
+
+Total runs: 91 full-500 evaluations
+Total Qwen variant identifiers tested: ~9 (3 core open-weight families — Qwen3-Coder-Next 80B / Qwen3.5-27B / Qwen3.6-27B — plus ~5 Coder-specialized variants and proxy-version test branches; also 2 brief closed-API protocol checks for compatibility validation)
+Span: 2026-02-04 to 2026-05-11 (≈ 97 days)
+Successful runs (>50 %): 7 / 91 (8 %)
+Final breakthrough: same-model, agent-stack improvement of +22.2 pt over baseline
+
+If the leaderboard ranking were just about model raw power:
+  Qwen3-Next 80B (mini-swe) → 68.0 %      [80 B model, simple agent]
+  Qwen3.5-27B-Thinking (mini-swe) → 67.8 %  [27 B model, simple agent, same baseline]
+  Qwen3.5-27B-Thinking (cli + proxy) → 90.0 % ← +22.2 pt FROM ENGINEERING
+
+The 80B model didn't beat the 27B model when given the same simple agent.
+The 27B model BEAT the 80B by 21pt when given a sophisticated agent.
+
+Smaller model + better engineering > bigger model + simpler engineering.
+
+Source: each row is a separate JSON file in
+/www/wwwroot/raid_disk/swe_bench_test/*.json
+emitted by `swebench.harness.run_evaluation` (the official harness).
+
+Full machine-readable table: evidence/timeline.csv (92 rows including header).

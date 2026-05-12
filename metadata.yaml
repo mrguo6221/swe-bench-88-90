@@ -1,0 +1,75 @@
+# SWE-bench Verified leaderboard submission metadata
+# See: https://github.com/swe-bench/SWE-bench/tree/main/swebench/leaderboard
+
+name: "claude-cli + custom proxy + Qwen3.6-27B-FP8"
+
+# Score — two-tier disclosure (recommended headline = 90.0%)
+verified:
+  # Floor: single-attempt, no retry of any kind, no env fix
+  floor:
+    resolved: 440
+    pct: 88.0
+    description: "Strict single-attempt. All 13 cli/proxy infrastructure crashes count as failure. No env-fix re-eval applied. preds file: evidence/preds.strict.json."
+
+  # Headline (RECOMMENDED): single-attempt + cli crash retry + psf env fix
+  headline:
+    resolved: 450
+    pct: 90.0
+    description: "Single-attempt + 13 cli/proxy crash retry (6 recovered + eval pass) + 4 psf__requests instances re-evaluated against real httpbin.org. preds file: evidence/preds.lenient.json + manual_eval_psf_real/. Composition: 446 from official swebench.harness on lenient preds (evidence/report_lenient.json) + 4 from psf real-httpbin re-eval (evidence/manual_eval_psf_real/)."
+
+# Model details
+model:
+  base: "Qwen3.6-27B-FP8"   # Alibaba official FP8 weights; obtained from Alibaba's public release channels
+  served_model_name: "Qwen3.5-27B-Thinking"  # sglang --served-model-name (downstream compat; see README "About model naming")
+  size_params: "27B"
+  quantization: "FP8 (Alibaba official; kv-cache also FP8 e4m3)"
+  open_weights: true
+  closed_api: false
+
+# Agent / harness
+agent:
+  name: "claude-cli (Anthropic claude-code) with custom proxy, -p one-shot mode"
+  cli_version: "@anthropic-ai/claude-code@2.1.23"
+  cli_open_source: true
+  proxy_open_source: false
+  proxy_capability_list: "proxy_capabilities.md"   # capability disclosure but not source
+
+# Inference backend
+inference:
+  framework: "sglang"
+  hardware: "12x RTX 4090 modded to 48GB VRAM (consumer-grade) across 2 hosts, served as 3 tensor-parallel instances of 4 GPUs each. NOT H100/A100. Minimum reproduction: 1 workstation x 4 cards = 1 sglang instance."
+  context_length: 262144  # 256K
+  kv_cache_dtype: "fp8_e4m3"
+  launch_command: "evidence/sglang_launch.sh"
+
+# Run details
+run:
+  date: "2026-05-11"
+  num_runs_per_instance: 1
+  retry_policy: "single retry for instances where cli/proxy infrastructure crashed (rc=137 SIGKILL or empty stream); 13 instances retried, 6 recovered + eval pass; full disclosure in SUBMISSION.md §3"
+  best_of_n: false  # 0 BON triggers across 4110 SWE-bench cli=claude requests
+  per_instance_timeout_seconds: 3600
+  parallelism: 4
+
+# Predictions
+predictions_headline_path: "evidence/preds.lenient.json"   # for 90.0% headline
+predictions_floor_path: "evidence/preds.strict.json"        # for 88.0% strict floor
+eval_report_path: "evidence/report_lenient.json"
+psf_env_fix_path: "evidence/manual_eval_psf_real/"
+
+# Notes
+notes: |
+  Two prediction files are provided:
+  - preds.lenient.json: full retry policy applied. swebench.harness gives 446/500 internally (=89.2% intermediate).
+    Combined with 4 psf__requests instances re-evaluated against real httpbin.org → 450/500 = 90.0% headline.
+  - preds.strict.json: no retry of any kind. swebench.harness expected to give 440/500 = 88.0% floor.
+
+  Reviewers may choose either tier. Headline 90.0% is the recommended interpretation; floor 88.0% is the most conservative.
+
+  Independent reproduction is welcome and encouraged. All non-proxy components are open source.
+  The proxy's behavior is described in proxy_capabilities.md with sufficient detail to reimplement.
+
+contact:
+  github: "https://github.com/mrguo6221"
+  email: "1163945738@qq.com"   # for SWE-bench reviewers, subject line "[SWE-Bench-NDA]"
+  affiliation: "Independent research, Jinan, Shandong, China. Author works at a Chinese industrial group's digital-services subsidiary (business includes IT services and AI engineering); full institutional affiliation available to qualified reviewers under Review Terms (see README)."

@@ -1,0 +1,39 @@
+/usr/lib/python3/dist-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from cryptography.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  "cipher": algorithms.TripleDES,
+/usr/lib/python3/dist-packages/paramiko/transport.py:261: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from cryptography.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  "class": algorithms.TripleDES,
+'[Errno 101] Network is unreachable' thrown while requesting HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified/resolve/99450355ca8c611021187a57ffac304b66666738/SWE-bench_Verified.py
+2026-05-12 12:31:11,443 - huggingface_hub.utils._http - WARNING - '[Errno 101] Network is unreachable' thrown while requesting HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified/resolve/99450355ca8c611021187a57ffac304b66666738/SWE-bench_Verified.py
+Retrying in 1s [Retry 1/5].
+2026-05-12 12:31:11,444 - huggingface_hub.utils._http - WARNING - Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since SWE-bench/SWE-bench_Verified couldn't be found on the Hugging Face Hub
+2026-05-12 12:31:12,446 - datasets.load - WARNING - Using the latest cached version of the dataset since SWE-bench/SWE-bench_Verified couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'default' at /home/test/.cache/huggingface/datasets/SWE-bench___swe-bench_verified/default/0.0.0/99450355ca8c611021187a57ffac304b66666738 (last modified on Sat Feb 21 00:43:54 2026).
+2026-05-12 12:31:12,446 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'default' at /home/test/.cache/huggingface/datasets/SWE-bench___swe-bench_verified/default/0.0.0/99450355ca8c611021187a57ffac304b66666738 (last modified on Sat Feb 21 00:43:54 2026).
+'[Errno 101] Network is unreachable' thrown while requesting HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified/resolve/99450355ca8c611021187a57ffac304b66666738/SWE-bench_Verified.py
+2026-05-12 12:31:12,791 - huggingface_hub.utils._http - WARNING - '[Errno 101] Network is unreachable' thrown while requesting HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified/resolve/99450355ca8c611021187a57ffac304b66666738/SWE-bench_Verified.py
+Retrying in 1s [Retry 1/5].
+2026-05-12 12:31:12,791 - huggingface_hub.utils._http - WARNING - Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since SWE-bench/SWE-bench_Verified couldn't be found on the Hugging Face Hub
+2026-05-12 12:31:13,793 - datasets.load - WARNING - Using the latest cached version of the dataset since SWE-bench/SWE-bench_Verified couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'default' at /home/test/.cache/huggingface/datasets/SWE-bench___swe-bench_verified/default/0.0.0/99450355ca8c611021187a57ffac304b66666738 (last modified on Sat Feb 21 00:43:54 2026).
+2026-05-12 12:31:13,794 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'default' at /home/test/.cache/huggingface/datasets/SWE-bench___swe-bench_verified/default/0.0.0/99450355ca8c611021187a57ffac304b66666738 (last modified on Sat Feb 21 00:43:54 2026).
+[OFFLINE-PATCH] Loaded 21 requirements + 7 env yml entries from local cache
+[OFFLINE-PATCH] Patched get_requirements_by_commit + get_environment_yml_by_commit
+Found 12 existing instance images. Will reuse them.
+Running 12 instances...
+Evaluation:   0%|          | 0/12 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]Evaluation:   0%|          | 0/12 [00:26<?, ?it/s, ✓=1, ✖=0, error=0]Evaluation:   8%|▊         | 1/12 [00:26<04:52, 26.57s/it, ✓=1, ✖=0, error=0]Evaluation:   8%|▊         | 1/12 [00:26<04:52, 26.57s/it, ✓=1, ✖=1, error=0]Evaluation:  17%|█▋        | 2/12 [00:26<01:51, 11.19s/it, ✓=1, ✖=1, error=0]Evaluation:  17%|█▋        | 2/12 [00:27<01:51, 11.19s/it, ✓=2, ✖=1, error=0]Evaluation:  25%|██▌       | 3/12 [00:27<00:57,  6.39s/it, ✓=2, ✖=1, error=0]Evaluation:  25%|██▌       | 3/12 [02:01<00:57,  6.39s/it, ✓=3, ✖=1, error=0]Evaluation:  33%|███▎      | 4/12 [02:01<05:27, 40.96s/it, ✓=3, ✖=1, error=0]Evaluation:  33%|███▎      | 4/12 [02:02<05:27, 40.96s/it, ✓=4, ✖=1, error=0]Evaluation:  42%|████▏     | 5/12 [02:02<03:04, 26.36s/it, ✓=4, ✖=1, error=0]Evaluation:  42%|████▏     | 5/12 [02:05<03:04, 26.36s/it, ✓=4, ✖=2, error=0]Evaluation:  50%|█████     | 6/12 [02:05<01:52, 18.70s/it, ✓=4, ✖=2, error=0]Evaluation:  50%|█████     | 6/12 [02:28<01:52, 18.70s/it, ✓=4, ✖=3, error=0]Evaluation:  58%|█████▊    | 7/12 [02:28<01:39, 19.90s/it, ✓=4, ✖=3, error=0]Evaluation:  58%|█████▊    | 7/12 [02:28<01:39, 19.90s/it, ✓=4, ✖=4, error=0]Evaluation:  67%|██████▋   | 8/12 [02:28<00:54, 13.63s/it, ✓=4, ✖=4, error=0]Evaluation:  67%|██████▋   | 8/12 [02:29<00:54, 13.63s/it, ✓=5, ✖=4, error=0]Evaluation:  75%|███████▌  | 9/12 [02:29<00:28,  9.53s/it, ✓=5, ✖=4, error=0]Evaluation:  75%|███████▌  | 9/12 [02:30<00:28,  9.53s/it, ✓=5, ✖=5, error=0]Evaluation:  83%|████████▎ | 10/12 [02:30<00:13,  6.97s/it, ✓=5, ✖=5, error=0]Evaluation:  83%|████████▎ | 10/12 [03:27<00:13,  6.97s/it, ✓=6, ✖=5, error=0]Evaluation:  92%|█████████▏| 11/12 [03:27<00:22, 22.26s/it, ✓=6, ✖=5, error=0]Evaluation:  92%|█████████▏| 11/12 [04:07<00:22, 22.26s/it, ✓=7, ✖=5, error=0]Evaluation: 100%|██████████| 12/12 [04:07<00:00, 27.66s/it, ✓=7, ✖=5, error=0]Evaluation: 100%|██████████| 12/12 [04:07<00:00, 20.60s/it, ✓=7, ✖=5, error=0]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 12
+Instances incomplete: 0
+Instances resolved: 7
+Instances unresolved: 5
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 12
+Report written to qwen-code+8028proxy__Qwen3.5-27B-Thinking.qwen_swe_500_retry_eval.json

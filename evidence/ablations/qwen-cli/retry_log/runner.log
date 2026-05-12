@@ -1,0 +1,45 @@
+[loader] loading SWE-bench/SWE-bench_Verified
+'[Errno 101] Network is unreachable' thrown while requesting HEAD https://hf-mirror.com/datasets/SWE-bench/SWE-bench_Verified/resolve/99450355ca8c611021187a57ffac304b66666738/SWE-bench_Verified.py
+Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since SWE-bench/SWE-bench_Verified couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'default' at /home/test/.cache/huggingface/datasets/SWE-bench___swe-bench_verified/default/0.0.0/99450355ca8c611021187a57ffac304b66666738 (last modified on Sat Feb 21 00:43:54 2026).
+[loader] 16 instances
+[loader] 16 todo
+[django__django-10554] start 09:06:37
+[django__django-10999] start 09:06:37
+[django__django-10999] done 625s rc=0 patch=1494B
+[django__django-11734] start 09:17:04
+[django__django-10554] done 3176s rc=0 patch=0B
+[django__django-12663] start 09:59:35
+[django__django-11734] done 2658s rc=0 patch=2250B
+[django__django-14011] start 10:01:23
+[django__django-12663] done 644s rc=0 patch=1018B
+[django__django-15098] start 10:10:20
+[django__django-15098] done 332s rc=0 patch=527B
+[django__django-15128] start 10:15:53
+[django__django-15128] done 1745s rc=0 patch=2890B
+[django__django-15280] start 10:44:59
+[django__django-14011] done 2678s rc=0 patch=4480B
+[django__django-15503] start 10:46:03
+[django__django-15280] done 469s rc=0 patch=89B
+[django__django-16263] start 10:52:50
+[django__django-15503] done 451s rc=0 patch=1651B
+[django__django-16950] start 10:53:35
+[django__django-16950] done 529s rc=0 patch=1587B
+[matplotlib__matplotlib-20826] start 11:02:25
+[matplotlib__matplotlib-20826] done 893s rc=0 patch=1512B
+[pydata__xarray-7229] start 11:17:20
+[django__django-16263] done 3638s rc=137 patch=0B
+[pytest-dev__pytest-6197] start 11:53:28
+[pytest-dev__pytest-6197] done 160s rc=0 patch=467B
+[sphinx-doc__sphinx-8548] start 11:56:09
+[sphinx-doc__sphinx-8548] done 1034s rc=0 patch=3399B
+[sympy__sympy-22456] start 12:13:25
+[pydata__xarray-7229] done 3623s rc=137 patch=0B
+[sympy__sympy-22456] done 755s rc=0 patch=0B
+
+=== SUMMARY ===
+total: 16
+has model_patch: 12
+errors: 2
+failed list: /tmp/qwen_swe_500_retry/_failed.txt
