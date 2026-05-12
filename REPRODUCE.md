@@ -152,3 +152,16 @@ We did not run the full 500 multiple times to estimate variance. If you reproduc
 ## 10. Independent contact
 
 If your reproduction gives a substantively different number (>3 pt off in either direction) we genuinely want to know. Please file an issue on this repo. For SWE-bench official reviewers requesting supplementary materials, see the "For SWE-bench Official Reviewers" section in `README.md`.
+
+## 11. Reproducing the CLI-swap ablation
+
+To reproduce the qwen-cli ablation (verifying the result is CLI-independent):
+
+1. Set up steps 1-3 identically (sglang serving Qwen3.6-27B-FP8, proxy on localhost:8028).
+2. Install `qwen-code` from Alibaba (`https://github.com/QwenLM/qwen-code` or equivalent — see Alibaba's published distribution).
+3. Replace claude-cli invocation with: `qwen-code --auth-type anthropic --base-url http://localhost:8028 -p "<prompt>"`. The runner script analogue is `qwen_swe_runner.py` (uses the same docker + git-diff capture flow as `cli_swe_runner.py`).
+4. Run `swebench.harness.run_evaluation` on the resulting preds. For network-isolated eval hosts, retry the 4 psf__requests instances on a host with httpbin.org access.
+
+Expected result: 437/500 = 87.4 % headline (vs 90.0 % for claude-cli); 427/500 = 85.4 % strict floor.
+
+Full data, preds files, and per-instance reports for the ablation are in `evidence/ablations/qwen-cli/`.

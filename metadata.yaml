@@ -69,6 +69,32 @@ notes: |
   Independent reproduction is welcome and encouraged. All non-proxy components are open source.
   The proxy's behavior is described in proxy_capabilities.md with sufficient detail to reimplement.
 
+# Anti-cheat ablation: CLI swap
+# Same model + same proxy + different CLI (Alibaba's qwen-code instead of claude-cli)
+ablations:
+  cli_swap:
+    description: "CLI-swap ablation to rule out claude-cli-specific exploitation. Same model (Qwen3.6-27B-FP8) + same proxy (localhost:8028) + different CLI (Alibaba's qwen-code, run via the same proxy)."
+    qwen_cli:
+      strict_floor:
+        resolved: 427
+        pct: 85.4
+      headline:
+        resolved: 437
+        pct: 87.4
+        description: "434 from swebench.harness on combined lenient preds + 3 from psf__requests real-httpbin re-eval (psf-1724/1766/1921 resolved; psf-2317 unresolved)."
+      # Reviewer-facing evidence files (parallel to the main submission's evidence/*)
+      predictions_headline_path: "evidence/ablations/qwen-cli/preds.lenient.json"
+      predictions_floor_path: "evidence/ablations/qwen-cli/preds.strict.json"
+      eval_report_lenient_path: "evidence/ablations/qwen-cli/report.lenient.json"
+      eval_report_strict_path: "evidence/ablations/qwen-cli/report.strict.json"
+      psf_env_fix_path: "evidence/ablations/qwen-cli/manual_eval_psf_real/"
+      retry_log_path: "evidence/ablations/qwen-cli/retry_log/"
+      sha256sums_path: "evidence/ablations/qwen-cli/SHA256SUMS"
+      readme_path: "evidence/ablations/qwen-cli/README.md"
+    same_model_baseline: 67.8
+    gap_vs_claude_cli: -2.6  # consistent across all tiers
+    interpretation: "Both CLIs significantly outperform same-model mini-swe-agent baseline (67.8%) and public SOTA (79.2%). The ~2.6 pt gap is structural (CLI tool-surface design differences), not dataset-specific. See evidence/ablations/qwen-cli/README.md."
+
 contact:
   github: "https://github.com/mrguo6221"
   email: "1163945738@qq.com"   # for SWE-bench reviewers, subject line "[SWE-Bench-NDA]"

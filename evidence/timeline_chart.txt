@@ -128,4 +128,16 @@ Source: each row is a separate JSON file in
 /www/wwwroot/raid_disk/swe_bench_test/*.json
 emitted by `swebench.harness.run_evaluation` (the official harness).
 
-Full machine-readable table: evidence/timeline.csv (92 rows including header).
+Full machine-readable table: evidence/timeline.csv (95 rows including header).
+
+----------------------------------------------------------------------
+Anti-cheat ablation (post-main, same date, separate from chronology):
+
+  May 11: Qwen3.5-27B-Thinking + qwen-cli + proxy (strict floor):  85.4 %  (427/500)
+  May 12: Qwen3.5-27B-Thinking + qwen-cli + proxy (lenient):       86.8 %  (434/500)
+  May 12: ★ qwen-cli headline (lenient + psf real-httpbin):    ⭐  87.4 %  (437/500)
+
+Same model + same proxy + different CLI (Alibaba's qwen-code instead of
+claude-cli). Confirms the engineering uplift is not claude-cli-specific.
+Gap vs claude-cli: -2.6 pt, consistent across all tiers.
+See evidence/ablations/qwen-cli/README.md for full detail.

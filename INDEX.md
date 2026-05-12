@@ -14,7 +14,15 @@
 | `evidence/manual_eval_psf_real/` | 4 psf__requests instances re-evaluated against real `httpbin.org` (eval host is network-isolated). All FAIL_TO_PASS tests pass. |
 | `evidence/sglang_launch.sh` | Exact sglang startup command. |
 | `evidence/SHA256SUMS` | SHA-256 checksums for every evidence file. |
-| `evidence/ablations/qwen-cli/` | CLI swap ablation — same model + same proxy + qwen-cli instead of claude-cli. 87.4% headline (vs 90.0% for claude-cli, -2.6 pt). Confirms result is not claude-cli-specific. |
+| `evidence/ablations/qwen-cli/` | CLI swap ablation — same model + same proxy + qwen-cli instead of claude-cli. 87.4 % headline (vs 90.0 % for claude-cli, -2.6 pt). Confirms result is not claude-cli-specific. Reviewer-facing files (parallel to the main `evidence/*`): |
+| `evidence/ablations/qwen-cli/README.md` | Ablation methodology, results table, failure-mode comparison, reproduction. |
+| `evidence/ablations/qwen-cli/preds.lenient.json` | qwen-cli headline preds (with retry applied). |
+| `evidence/ablations/qwen-cli/preds.strict.json` | qwen-cli strict-floor preds (initial run only, no retry). |
+| `evidence/ablations/qwen-cli/report.lenient.json` | Official `swebench.harness` output on lenient preds — 434/500 resolved. |
+| `evidence/ablations/qwen-cli/report.strict.json` | Official `swebench.harness` output on initial run — 427/500 resolved. |
+| `evidence/ablations/qwen-cli/manual_eval_psf_real/` | 4 `psf__requests` instances re-evaluated against real `httpbin.org` (parallel to the main `manual_eval_psf_real/`). |
+| `evidence/ablations/qwen-cli/retry_log/` | `runner.log` (16 retry instances) + `eval.log` (12 retry evals). |
+| `evidence/ablations/qwen-cli/SHA256SUMS` | SHA-256 checksums for ablation evidence files. |
 | `evidence/timeline.csv` + `timeline_chart.txt` + `experiment_journey.md` | 3-month experiment chronology. |
 
 ## What is NOT in this repo

@@ -90,3 +90,6 @@ date,time,model,run_id,resolved,total,pct,mtime
 2026-05-10,16:53,Qwen3.5-27B-Thinking,5-27B-Thinking.cli_swe_retry_seaborn,1,500,0.2,1778403210
 2026-05-10,17:24,Qwen3.5-27B-Thinking,5-27B-Thinking.cli_swe_retry_req,0,500,0.0,1778405072
 2026-05-11,14:53,Qwen3.5-27B-Thinking,5-27B-Thinking.cli_swe_500_lenient,446,500,89.2,1778482404
+2026-05-11,11:52,Qwen3.5-27B-Thinking,qwen-cli.qwen_swe_500_full_strict,427,500,85.4,1778500320
+2026-05-12,01:21,Qwen3.5-27B-Thinking,qwen-cli.qwen_psf_4_real_httpbin,3,4,75.0,1778591694
+2026-05-12,04:30,Qwen3.5-27B-Thinking,qwen-cli.qwen_swe_500_lenient_combined,434,500,86.8,1778603400
